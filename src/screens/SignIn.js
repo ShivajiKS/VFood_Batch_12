@@ -48,7 +48,7 @@ export default function SignIn() {
   const onSubmit=(values,props)=>{
     signInWithEmailAndPassword(auth,values.email,values.password)
     .then(auth=>navigate("/Dashboard"))
-    .catch(error=>error?setError("Invalid user credientials"):null)
+    .catch(error=>error?setError("Error : invalid username or password"):null)
   }
 
   return (
@@ -72,7 +72,7 @@ export default function SignIn() {
           </Avatar>
           <Typography component="h1" variant="h5">Sign in</Typography>
           <Box sx={{ mt: 1 }}>
-          <Typography component="h1" variant="h5" style={{textAlign:"center",color:"red",textTransform:"capitalize"}}>{error}</Typography>
+          <Typography component="h1" variant="h6" style={{color:"white",textTransform:"capitalize",backgroundColor:"red",fontSize:"13px", opacity:0.7}}>{error}</Typography>
             <TextField
               margin="normal"
               required

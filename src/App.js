@@ -9,12 +9,13 @@ import SignInScreen from './screens/SignIn';
 import Error404 from './screens/404Error';
 import {UserAuthContextProvider} from "./context/UserAuthContext"
 import Dashboard from './screens/Dashboard';
+import { Email, Phone, Streetview, SurroundSoundSharp } from '@mui/icons-material';
 
 const App=()=> {
   return (
     <>   
-          <DrawerAppBar/> 
-             <Container>
+          <DrawerAppBar/>  
+              <Container>
                     <Routes> 
                           <Route path="/" element={<Home /> } />
                           <Route path="/Home" element={<Home /> } />
@@ -24,11 +25,27 @@ const App=()=> {
                           <Route path="/SignUp" element={<SinUpScreen/> } />
                           <Route path="/Dashboard" element={<Dashboard/> } />
                           <Route path="*" element={<Error404/> } />
-
                     </Routes> 
-              </Container>         
+              </Container>                  
+
     </>
   );
 }
 
+
+
+
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+

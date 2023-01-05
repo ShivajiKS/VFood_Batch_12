@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
   const navigate=useNavigate();
   const [user,loading,error]=useAuthState(auth);
   const signOut= async ()=>{
-            await signOut(auth);
+            await auth.signOut();
             navigate("/LogIn");
    }
   return (
